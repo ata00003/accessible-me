@@ -11,58 +11,77 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&family=Stick+No+Bills:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
 </head>
-
 <body>
+  <div class="skiplinks">
+    <ul>
+        <li><a href="#nav">Skip to navigation</a></li>
+        <li><a href="#main">Skip to main content</a></li>
+        <li><a href="#footer">Skip to footer</a></li>
+    </ul>
+    </div>
   <div class="container">
-    <div class="site-header">
-      <h1>Jam Box Studios</h1>
-      <div class="main-nav">
+      <header>
+        <h1 role="heading">Jam Box Studios</h1>
+      </header>  
+      <nav role="navigation" id="nav">
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Products</a></li>
           <li><a href="#">Reservation</a></li>
           <li><a href="#">Studio</a></li>
         </ul>
-      </div>
-      <img src="https://placekitten.com/1200/900" class="banner">
-    </div>
-    <div class="main-content">
-      <h1>Welcome to Jam Box</h1>
+      </nav>
+    <main role="main" id="main">
+      <div class=gridcontainer>
+        <div class=grid>
+      <img src="https://placekitten.com/1200/900" class="banner" alt="a small kitten">
+        </div>
+      <div class=grid>
+      <article>
+      <h2>Welcome to Jam Box</h2>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
-      <div class="owner">
-        <h1>Meet the owner</h1>
-        <ul>
-          <li>Name: John Doe</li>
-          <li>Title: CEO</li>
-          <li>Email: johnjoe@jambox.ca</li>
-          <li>Phone: 613-000-0000</li>
-        </ul>
-        <h1>Address</h1>
-        <p>
-          Jambox Studios
-          123 Guitar Road,
-          Musicville, Danceistan
-          B3T 0L0
-        </p>
+      </article>
       </div>
-      <div class="contact-section">
-        <h1>Contact Us</h1>
-        <form action="thanks.html">
-          <label>Full Name</label>
-          <input type="text" placeholder="Full Name">
-          <input type="text" placeholder="Email">
-          <input type="text" placeholder="Subject">
-          <b>Your Message</b>
-          <textarea></textarea>
+      <div class="grid">
+        <h2>Meet the owner</h2>
+        <dl itemscope itemtype="https://schema.org/Person">
+          <dt>Name:</dt>  
+          <dd itemprop="name">John Doe</dd>
+          <dt>Title:</dt>
+          <dd itemprop="jobTitle">CEO</dd>
+          <dt>Email:</dt> 
+          <dd itemprop="email">johnjoe@jambox.ca</dd>
+          <dt>Phone:</dt>
+          <dd itemprop="phone">613-000-0000</dd>
+          <dt>Address:</dt>
+          <dd itemprop="address">Jambox Studios
+            <p>23 Guitar Road,</p>
+            <p>Musicville, Danceistan</p>
+            <p>B3T 0L0</p></dd>
+        </dl>
+      </div>
+      <div class="grid">
+      <section>
+        <h2>Contact Us</h2>
+        <form action="thanks.html" method="post">
+          <label for="fullname">Full name</label>
+          <input type="text" id="fullname"  name="fullname" placeholder="Full Name">
+          <label for="email">Email</label>
+          <input type="text" id="email"  name="email" placeholder="Email">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject"  name="subject" placeholder="Subject">
+          <p><b>Your Message</b></p>
+          <textarea id="message"  name="message"></textarea>
           <button type="submit">Send</button>
         </form>
+      </section>
       </div>
-    </div>
-    <div class="site-footer">
+      </div>
+    </main>
+    <footer role="contentinfo" id="footer">
       &copy; 2021 Jam Box Studios
-    </div>
+    </footer>
   </div>
 </body>
-
 </html>

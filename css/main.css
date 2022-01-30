@@ -1,6 +1,6 @@
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: grey;
+  background-color:blanchedalmond;
   margin: 0;
   padding: 0;
 }
@@ -24,7 +24,7 @@ img {
   width: 100%;
 }
 
-.main-nav ul {
+nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -32,18 +32,30 @@ img {
   padding: 0;
 }
 
-.main-nav ul li {
+nav ul li {
   flex: 1;
   text-align: center;
 }
 
-.main-nav ul li a {
+nav ul li a {
   display: block;
   color: inherit;
   text-decoration: none;
   font-size: 1.25rem;
 }
-
+nav ul li a:hover{
+  background-color:chocolate;
+  color:white;
+}
+nav ul li a:focus{
+  border:2px solid black;
+}
+nav ul li a:active{
+  background-color:darkblue;
+}
+article{
+  line-height:30px;
+}
 form input,
 form textarea {
   display: block;
@@ -64,8 +76,35 @@ form button {
   border: 2px solid black;
   padding: 1rem;
   text-transform: uppercase;
+  cursor:pointer;
+}
+form button:hover{
+  background-color: chocolate;
+  color: white;
 }
 
-.site-footer {
-  padding: 2rem 0;
+footer {
+  padding:2rem;
+  margin-top:5rem;
+}
+.skiplinks ul{ 
+  position: relative;
+  list-style: none;
+}
+.skiplinks a{
+  position: absolute;
+  top:-20rem;
+}
+.skiplinks a:focus{
+  top:0;
+  background:pink;
+  display:block;
+  padding:8px;
+}
+.gridcontainer{
+  display: grid;
+  grid-template-columns:50% 50%;
+  grid-template-rows:45% 45%;
+  column-gap: 20px;
+  margin-top: 30px;
 }
